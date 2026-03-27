@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem 15</title>
+    <script>
+        // Function to change text style dynamically
+        function changeStyle() {
+            var size = document.getElementById("fontSize").value;
+            var color = document.getElementById("fontColor").value;
+            var bg = document.getElementById("bgColor").value;
+
+            var text = document.getElementById("message");
+
+            // Apply styles directly using style property
+            text.style.fontSize = size + "px";
+            text.style.color = color;
+            text.style.backgroundColor = bg;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Font Customization Tool</h2>
+
+    <fieldset>
+        <legend>Customize Text</legend>
+
+        Font Size:
+        <input type="range" id="fontSize" min="10" max="50" value="20" oninput="changeStyle()"><br><br>
+
+        Font Color:
+        <input type="color" id="fontColor" value="#000000" onchange="changeStyle()"><br><br>
+
+        Background Color:
+        <input type="color" id="bgColor" value="#ffff00" onchange="changeStyle()">
+    </fieldset>
+
+    <p id="message">Sample Text</p>
+    <h1>D.Abhishek</h1>
+    <h1>24BKT0064</h1>
+</body>
+</html>
